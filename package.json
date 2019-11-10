@@ -1,0 +1,19 @@
+{
+  "name": "invisionautomation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Maneesh Maddala",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^3.6.0",
+    "cypress-cucumber-preprocessor": "^1.16.2",
+    "cypress-xpath": "^1.4.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  }
+}
