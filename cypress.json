@@ -1,6 +1,15 @@
 {
   "viewportWidth": 1360,
   "viewportHeight": 760,
-  "defaultCommandTimeout": 8000,
+  "defaultCommandTimeout": 10000,
+  "reporter": "mochawesome",
+  "reporterOptions": 
+  {
+    "reportDir": "cypress/results/mochawesome-report",
+    "overwrite": false,
+    "html": false,
+    "json": true,
+    "timestamp": "mmddyyyy_HHMMss"
+   },
   "projectId": "1w5wcs"
 }

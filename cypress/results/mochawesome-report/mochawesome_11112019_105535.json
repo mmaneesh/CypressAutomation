@@ -1,0 +1,205 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 5,
+    "pending": 0,
+    "failures": 1,
+    "start": "2019-11-11T16:54:42.839Z",
+    "end": "2019-11-11T16:55:35.947Z",
+    "duration": 53108,
+    "testsRegistered": 6,
+    "passPercent": 83.33333333333334,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "845ec06f-18c1-42e2-a3e0-50051538c774",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6928912f-1683-4cd5-959a-353e1f569e45",
+          "title": "Invision Customer Care Module - Subscriber Search",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Launch And Login To Invision",
+              "fullTitle": "Invision Customer Care Module - Subscriber Search Launch And Login To Invision",
+              "timedOut": null,
+              "duration": 14226,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var loginPage = new _LoginPage[\"default\"]();\ncy.visit('https://qa1.invision.ascendon.tv/login');\ncy.wait(2000);\nloginPage.loginTextBox().should('exist');\nloginPage.loginTextBox().type('madman02');\nloginPage.loginPageNextBtn().should('have.text', 'Next');\nloginPage.loginPageNextBtn().click();\nloginPage.passwordTextBox().should('exist');\nloginPage.passwordTextBox().type('Mannu@1987');\nloginPage.loginBtn().should('exist');\nloginPage.loginBtn().click();\ncy.log('Invision Login Successful');\ncy.wait(3000);",
+              "err": {},
+              "uuid": "823a2d4d-56e2-47b8-9861-77c82fd36029",
+              "parentUUID": "6928912f-1683-4cd5-959a-353e1f569e45",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Click On Menu Icon",
+              "fullTitle": "Invision Customer Care Module - Subscriber Search Click On Menu Icon",
+              "timedOut": null,
+              "duration": 9634,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.xpath(\"//div[@class='c-header-section c-header-logo ng-isolate-scope is-selectable c-header-menu']\").should('exist');\ncy.xpath(\"//div[@class='c-header-section c-header-logo ng-isolate-scope is-selectable c-header-menu']\").click('bottomRight');\ncy.log('Clicked On The Menu Icon On The Landing Page');\ncy.wait(2000);\ncy.xpath(\"//div[@class='c-popoutAppSwitcher-item c-popoutAppSwitcher-item--customerCare is-active']//*[@class='c-icon']\").click();",
+              "err": {},
+              "uuid": "c4a700b7-d111-49a1-b100-8fc4706bb9e7",
+              "parentUUID": "6928912f-1683-4cd5-959a-353e1f569e45",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Searching For A Subscriber",
+              "fullTitle": "Invision Customer Care Module - Subscriber Search Searching For A Subscriber",
+              "timedOut": null,
+              "duration": 5919,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.xpath('//div[@class=\"c-callToAction-label ng-binding\"]').should('have.text', 'Welcome to Ascendon Customer Care');\ncy.get('#navigator-item-search > .c-navigatorItem-faceplate > .c-navigatorItem-icon > .c-icon').should('exist');\ncy.get('#navigator-item-search > .c-navigatorItem-faceplate > .c-navigatorItem-icon > .c-icon').click();\ncy.log('Clicked On The Search Icon On The Customer Page');\ncy.wait(2000);\ncy.xpath(\"//form[@id='customerSearchForm']//div[@class='c-searchPanel-header l-vertical-noShrink']\").should('exist');\ncy.xpath(\"//form[@id='customerSearchForm']//div[@class='c-searchPanel-header l-vertical-noShrink']\").should('contain.text', 'SEARCH');",
+              "err": {},
+              "uuid": "d4055ef7-08fc-4177-a25a-2e474620e771",
+              "parentUUID": "6928912f-1683-4cd5-959a-353e1f569e45",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Enter Subscriber Id And Click Search",
+              "fullTitle": "Invision Customer Care Module - Subscriber Search Enter Subscriber Id And Click Search",
+              "timedOut": null,
+              "duration": 2994,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#subscriberId').should('exist');\ncy.get('#subscriberId').type('347507');\ncy.log('Entered Subscriber id Successfully');\ncy.get('.c-searchPanel-actions > .c-button').should('exist');\ncy.get('.c-searchPanel-actions > .c-button').click();\ncy.wait(2000);\ncy.get('.c-navGroup-navList > .c-link').should('contain.text', 'maneesh.maddala@csgi.com');\ncy.log('The Email Address verified Successfully');",
+              "err": {},
+              "uuid": "46684461-c320-4b0d-93a4-31d2abbcf5c0",
+              "parentUUID": "6928912f-1683-4cd5-959a-353e1f569e45",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Ordering A New Product",
+              "fullTitle": "Invision Customer Care Module - Subscriber Search Ordering A New Product",
+              "timedOut": null,
+              "duration": 11681,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.c-navGroup-navList > :nth-child(1) > .ng-binding').should('exist');\ncy.get('.c-navGroup-navList > :nth-child(1) > .ng-binding').should('contain.text', 'Start Product Order');\ncy.get('.c-navGroup-navList > :nth-child(1) > .ng-binding').click();\ncy.log('Successfully Clicked On Start Product order Link');\ncy.wait(1000);\ncy.get('.c-searchForm-searchInput').type('Interstellar');\ncy.wait(1000);\ncy.xpath(\"//button[@class='c-selectButton u-ml+ ng-binding'][contains(.,'Go')]\").click();\ncy.log('Successfully Clicked On Go Button On The Products Page');\ncy.wait(2000);",
+              "err": {
+                "message": "CypressError: Timed out retrying: cy.click() failed because this element:\n\n<button class=\"c-selectButton u-ml+ ng-binding\" type=\"button\" ng-bind=\"::productsController.customerCareKeys.GO | i18n\" ng-click=\"productsController.keywordGo()\">Go</button>\n\nis being covered by another element:\n\n<div class=\"c-loadingIndicator  is-loading\" ng-class=\"{\n        'is-global': invLoadingIndicatorController.isGlobal,\n        'is-loading': invLoadingIndicatorController.isLoading,\n        'is-pageCover': invLoadingIndicatorController.coverPage }\">...</div>\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                "estack": "CypressError: Timed out retrying: cy.click() failed because this element:\n\n<button class=\"c-selectButton u-ml+ ng-binding\" type=\"button\" ng-bind=\"::productsController.customerCareKeys.GO | i18n\" ng-click=\"productsController.keywordGo()\">Go</button>\n\nis being covered by another element:\n\n<div class=\"c-loadingIndicator  is-loading\" ng-class=\"{\n        'is-global': invLoadingIndicatorController.isGlobal,\n        'is-loading': invLoadingIndicatorController.isLoading,\n        'is-pageCover': invLoadingIndicatorController.coverPage }\">...</div>\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at Object.cypressErr (https://invision.qa1.ascendon.tv/__cypress/runner/cypress_runner.js:104940:11)\n    at Object.throwErr (https://invision.qa1.ascendon.tv/__cypress/runner/cypress_runner.js:104895:18)\n    at Object.throwErrByPath (https://invision.qa1.ascendon.tv/__cypress/runner/cypress_runner.js:104927:17)\n    at Object.retry (https://invision.qa1.ascendon.tv/__cypress/runner/cypress_runner.js:96263:16)\n    at retryActionability (https://invision.qa1.ascendon.tv/__cypress/runner/cypress_runner.js:85007:19)\n    at tryCatcher (https://invision.qa1.ascendon.tv/__cypress/runner/cypress_runner.js:138979:23)\n    at Function.Promise.attempt.Promise.try (https://invision.qa1.ascendon.tv/__cypress/runner/cypress_runner.js:136254:29)\n    at tryFn (https://invision.qa1.ascendon.tv/__cypress/runner/cypress_runner.js:96721:21)\n    at whenStable (https://invision.qa1.ascendon.tv/__cypress/runner/cypress_runner.js:96756:12)\n    at https://invision.qa1.ascendon.tv/__cypress/runner/cypress_runner.js:96306:16\n    at tryCatcher (https://invision.qa1.ascendon.tv/__cypress/runner/cypress_runner.js:138979:23)\n    at Promise._settlePromiseFromHandler (https://invision.qa1.ascendon.tv/__cypress/runner/cypress_runner.js:136915:31)\n    at Promise._settlePromise (https://invision.qa1.ascendon.tv/__cypress/runner/cypress_runner.js:136972:18)\n    at Promise._settlePromise0 (https://invision.qa1.ascendon.tv/__cypress/runner/cypress_runner.js:137017:10)\n    at Promise._settlePromises (https://invision.qa1.ascendon.tv/__cypress/runner/cypress_runner.js:137096:18)\n    at Promise._fulfill (https://invision.qa1.ascendon.tv/__cypress/runner/cypress_runner.js:137041:18)",
+                "diff": null
+              },
+              "uuid": "c21483db-9610-438b-8cc9-868020c191d2",
+              "parentUUID": "6928912f-1683-4cd5-959a-353e1f569e45",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Logging Out Of Invision",
+              "fullTitle": "Invision Customer Care Module - Subscriber Search Logging Out Of Invision",
+              "timedOut": null,
+              "duration": 5225,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.xpath(\"//div[@class='c-button c-button--icon c-header-menu c-header-action l-centerBoth u-sizeFull']//*[@class='c-icon']\").click();\ncy.xpath(\"//div[contains(text(),'Logout')]\").click();\ncy.log('Clicked On The Logout Link Successfully');\ncy.get('.c-brand-logo').should('exist');\ncy.log('Logged out Of Invision Successfully');",
+              "err": {},
+              "uuid": "7cd66ab6-2e78-433a-a57e-5153a16939d8",
+              "parentUUID": "6928912f-1683-4cd5-959a-353e1f569e45",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "823a2d4d-56e2-47b8-9861-77c82fd36029",
+            "c4a700b7-d111-49a1-b100-8fc4706bb9e7",
+            "d4055ef7-08fc-4177-a25a-2e474620e771",
+            "46684461-c320-4b0d-93a4-31d2abbcf5c0",
+            "7cd66ab6-2e78-433a-a57e-5153a16939d8"
+          ],
+          "failures": [
+            "c21483db-9610-438b-8cc9-868020c191d2"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 49679,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "5.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results/mochawesome-report",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "4.0.1"
+    }
+  }
+}

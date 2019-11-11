@@ -6,7 +6,7 @@ describe('Invision Customer Care Module - Subscriber Search', function()
     it('Launch And Login To Invision', function()
     {
         const loginPage = new LoginPage()
-        cy.visit('https://qa10.invision.ascendon.tv/login')
+        cy.visit('https://qa1.invision.ascendon.tv/login')
         cy.wait(2000)
         loginPage.loginTextBox().should('exist')
         loginPage.loginTextBox().type('madman02')

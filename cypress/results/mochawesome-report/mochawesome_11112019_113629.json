@@ -1,0 +1,200 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2019-11-11T17:35:44.153Z",
+    "end": "2019-11-11T17:36:29.693Z",
+    "duration": 45540,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6bb50205-9f27-42a3-a5aa-da6436002a77",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8fffc442-45bc-4e10-a73e-d3f410cc929d",
+          "title": "Invision Studio Tests - Channel",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Launch And Login To Invision",
+              "fullTitle": "Invision Studio Tests - Channel Launch And Login To Invision",
+              "timedOut": null,
+              "duration": 12995,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.invLogin(this.ChannelTestData.url, this.ChannelTestData.Username, this.ChannelTestData.Password);",
+              "err": {},
+              "uuid": "79a69460-c518-4e65-8812-3930f5a0e4c6",
+              "parentUUID": "8fffc442-45bc-4e10-a73e-d3f410cc929d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Selecting Studio Option From Menu",
+              "fullTitle": "Invision Studio Tests - Channel Selecting Studio Option From Menu",
+              "timedOut": null,
+              "duration": 14119,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.selectStudio();",
+              "err": {},
+              "uuid": "5e862758-3e47-46f6-a333-0a66d71d2434",
+              "parentUUID": "8fffc442-45bc-4e10-a73e-d3f410cc929d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Clicking On The Channel Sub Menu",
+              "fullTitle": "Invision Studio Tests - Channel Clicking On The Channel Sub Menu",
+              "timedOut": null,
+              "duration": 4335,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.clickChannelSubMenu();",
+              "err": {},
+              "uuid": "3dd8f147-c87a-4cbf-98bd-9240c04863bf",
+              "parentUUID": "8fffc442-45bc-4e10-a73e-d3f410cc929d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Searching For A Channel",
+              "fullTitle": "Invision Studio Tests - Channel Searching For A Channel",
+              "timedOut": null,
+              "duration": 2352,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.searchChannel(this.ChannelTestData.ChannelName);",
+              "err": {},
+              "uuid": "085cbff0-37be-47bd-a5c1-c894a35c2e4d",
+              "parentUUID": "8fffc442-45bc-4e10-a73e-d3f410cc929d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Clicking On The Channel Link",
+              "fullTitle": "Invision Studio Tests - Channel Clicking On The Channel Link",
+              "timedOut": null,
+              "duration": 2382,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if (cy.xpath(\"//div[@class='u-flex u-flexMiddle u-flexSpaced']\").should('exist')) {\n  cy.xpath(\"//div[@class='u-flex u-flexMiddle u-flexSpaced']\").should('have.length', 3);\n  cy.xpath(\"//div[@class='u-flex u-flexMiddle u-flexSpaced']\").each(function ($el, index, $list) {\n    var chnlName = $el.find('a.ng-binding.ng-isolate-scope.c-smartTruncate.is-truncated').text();\n    cy.log(chnlName);\n    if (chnlName.includes('Chicago')) {\n      cy.contains('ABC (Chicago)').click();\n    }\n  });\n  cy.wait(2000);\n  cy.xpath(\"//div[@class='c-heading-label ng-binding']\").should('have.text', 'General Information'); //Validation Using Jquery\n  cy.xpath(\"//div[@class='c-heading-label ng-binding']\").then(function (strtext) {\n    cy.log(strtext.text());\n  });\n  cy.xpath(\"//div[@class='c-button c-button--icon ng-scope ng-isolate-scope']\").should('exist');\n  cy.xpath(\"//button[@class='c-button c-button--primary ng-binding']\").should('exist');\n  cy.xpath(\"//open-new-window[@class='ng-isolate-scope']\").should('exist');\n}",
+              "err": {},
+              "uuid": "9e596436-1459-4425-8517-f4d32ba4d67a",
+              "parentUUID": "8fffc442-45bc-4e10-a73e-d3f410cc929d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Logging Out Of Invision",
+              "fullTitle": "Invision Studio Tests - Channel Logging Out Of Invision",
+              "timedOut": null,
+              "duration": 5036,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.invLogout();",
+              "err": {},
+              "uuid": "18c0ac0c-0272-49a0-8aad-ade8efa2d7ef",
+              "parentUUID": "8fffc442-45bc-4e10-a73e-d3f410cc929d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "79a69460-c518-4e65-8812-3930f5a0e4c6",
+            "5e862758-3e47-46f6-a333-0a66d71d2434",
+            "3dd8f147-c87a-4cbf-98bd-9240c04863bf",
+            "085cbff0-37be-47bd-a5c1-c894a35c2e4d",
+            "9e596436-1459-4425-8517-f4d32ba4d67a",
+            "18c0ac0c-0272-49a0-8aad-ade8efa2d7ef"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 41219,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "5.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results/mochawesome-report",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "4.0.1"
+    }
+  }
+}

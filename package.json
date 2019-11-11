@@ -4,14 +4,27 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "headlessTest": "node_modules\\.bin\\cypress run",
+    "headedTest": "npm run headlessTest -- --headed",
+    "chromeTest": "npm run headlessTest -- --browser chrome",
+    "mochawesomeReport": "npx cypress run --reporter mochawesome",
+    "mochawesomeMerge": "npx mochawesome-merge --reportDir cypress/results/mochawesome-reports > mochawesome.json",
+    "mochawesomeHTML": "npx mochawesome-report-generator mochawesome.json",
+    "openCypress": "npx cypress open"
+
   },
   "author": "Maneesh Maddala",
   "license": "ISC",
   "devDependencies": {
     "cypress": "^3.6.0",
     "cypress-cucumber-preprocessor": "^1.16.2",
-    "cypress-xpath": "^1.4.0"
+    "cypress-xpath": "^1.4.0",
+    "mochawesome": "^4.1.0",
+    "mochawesome-merge": "^2.0.1",
+    "mochawesome-report-generator": "^4.0.1"
+  },
+  "dependencies": {
+    "mocha": "^5.2.0"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true

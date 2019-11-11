@@ -1,0 +1,182 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2019-11-11T17:33:36.704Z",
+    "end": "2019-11-11T17:34:03.273Z",
+    "duration": 26569,
+    "testsRegistered": 5,
+    "passPercent": 20,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 4,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "63c09b7e-fbc3-415a-8dea-00be3004a9b6",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e8449d1e-1dc2-4071-9913-09c0243f32e3",
+          "title": "Invision Studio Tests - Products",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Launch And Login To Invision",
+              "fullTitle": "Invision Studio Tests - Products Launch And Login To Invision",
+              "timedOut": null,
+              "duration": 11818,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.invLogin(this.ProductTestData.url, this.ProductTestData.Username, this.ProductTestData.Password);",
+              "err": {},
+              "uuid": "fcc3cd77-eef4-408a-b746-f8e09ac63c79",
+              "parentUUID": "e8449d1e-1dc2-4071-9913-09c0243f32e3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Selecting Studio Option From Menu",
+              "fullTitle": "Invision Studio Tests - Products Selecting Studio Option From Menu",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.selectStudio();",
+              "err": {},
+              "uuid": "f28a076b-94c2-4ac0-906b-313f29b9062b",
+              "parentUUID": "e8449d1e-1dc2-4071-9913-09c0243f32e3",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Clicking On The products Sub Menu",
+              "fullTitle": "Invision Studio Tests - Products Clicking On The products Sub Menu",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.clickProductSubMenu();",
+              "err": {},
+              "uuid": "bd47b757-0d78-4aa3-9048-b42e59ed8537",
+              "parentUUID": "e8449d1e-1dc2-4071-9913-09c0243f32e3",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Searching For A Product And Clicking On The Product Link",
+              "fullTitle": "Invision Studio Tests - Products Searching For A Product And Clicking On The Product Link",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "this.ProductTestData.Productname.forEach(function (element) {\n  cy.searchProduct(element);\n  cy.wait(1000);\n  if (cy.xpath(\"//a[@class='ng-binding ng-scope ng-isolate-scope c-smartTruncate is-truncated']\").should('exist')) {\n    cy.xpath(\"//a[@class='ng-binding ng-scope ng-isolate-scope c-smartTruncate is-truncated']\").click();\n    cy.wait(2000);\n    cy.xpath(\"//div[@class='c-heading-label ng-binding']\").should('have.text', 'General Information');\n    cy.xpath(\"//div[@class='c-button c-button--icon ng-scope ng-isolate-scope']\").should('exist');\n    cy.xpath(\"//div[@class='c-button c-button--primary ng-binding ng-scope']\").should('exist');\n    cy.xpath(\"//div[@class='c-openNewWindow']\").should('exist'); //cy.pause()\n    // Navigating Back to Products\n    cy.xpath(\"//div[@class='c-breadcrumb ng-binding']\").should('exist');\n    cy.xpath(\"//div[@class='c-breadcrumb ng-binding']\").click();\n    cy.wait(1000);\n    cy.xpath(\"//inv-icon[@class='c-erasableInput-icon ng-isolate-scope']//*[@class='c-icon']\").click();\n  }\n});",
+              "err": {},
+              "uuid": "46f815b3-ac5c-457e-b11b-2e1e86175bd1",
+              "parentUUID": "e8449d1e-1dc2-4071-9913-09c0243f32e3",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Logging Out Of Invision",
+              "fullTitle": "Invision Studio Tests - Products Logging Out Of Invision",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.invLogout();",
+              "err": {},
+              "uuid": "52091fb3-ecf8-452c-8c6c-5d1228b6b807",
+              "parentUUID": "e8449d1e-1dc2-4071-9913-09c0243f32e3",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "fcc3cd77-eef4-408a-b746-f8e09ac63c79"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [
+            "f28a076b-94c2-4ac0-906b-313f29b9062b",
+            "bd47b757-0d78-4aa3-9048-b42e59ed8537",
+            "46f815b3-ac5c-457e-b11b-2e1e86175bd1",
+            "52091fb3-ecf8-452c-8c6c-5d1228b6b807"
+          ],
+          "duration": 11818,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "5.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results/mochawesome-report",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "4.0.1"
+    }
+  }
+}
